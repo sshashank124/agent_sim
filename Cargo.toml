@@ -1,0 +1,34 @@
+[package]
+name = "agent_sim"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+bytemuck = { version = "1", features = ["derive"] }
+cfg-if = "1"
+env_logger = "0.11"
+fastrand = "2"
+log = "0.4"
+pollster = "0.4"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+wgpu = "23.0"
+winit = { version = "0.29", features = ["rwh_05"] }
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+console_error_panic_hook = "0.1.7"
+console_log = "1"
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4"
+web-sys = { version = "0.3", features = ["Document", "Window", "Element"] }
+
+[workspace.lints.clippy]
+all = "warn"
+complexity = "warn"
+pedantic = "warn"
+perf = "warn"
+nursery = "warn"
+suspicious = "warn"

@@ -1,0 +1,18 @@
+{
+  "width": 720,
+  "height": 720,
+  "num_agents": 400000,
+  "random_seed": 24,
+  "world": {
+    "decay_rate": 0.002,
+    "diffuse_radius": 1
+  },
+  "agent": {
+    "speed": 0.1,
+    "turning_speed": 100.0,
+    "sensor_distance": 0.03,
+    "sensor_angle": 75.0,
+    "sensor_radius": 3,
+    "draw_scale": 0.0
+  }
+}
